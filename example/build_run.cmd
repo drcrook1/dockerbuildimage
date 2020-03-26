@@ -6,7 +6,7 @@ REM remove volume only if you need to clear your terraform local state
 REM docker volume rm tfstate
 
 REM build the image with any updates
-docker build -t my_deploy_image -f deploy.docker .
+docker build -t my_deploy_image -f deploy.dockerfile .
 
 REM Creates a new volume if named volume does not exist (fails if it does exist, thats ok.)
 docker volume create --name tfstate
